@@ -16,7 +16,7 @@ public class AddressTest {
     @Before
     public void createAddress() {
 
-        address = new Address("Test Street", 1, 12345, "Test City");
+        address = new Address();
     }
 
     @Test

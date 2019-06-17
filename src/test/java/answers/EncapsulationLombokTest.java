@@ -18,7 +18,7 @@ public class EncapsulationLombokTest {
     @Before
     public void createCar() {
 
-        car = new CarLombok("Maserati", "Ghibli", 2019);
+        car = new CarLombok();
     }
 
     @Test

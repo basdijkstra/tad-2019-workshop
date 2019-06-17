@@ -5,16 +5,11 @@ import lombok.Data;
 @Data
 public class AddressLombok {
 
-    private String street;
-    private int houseNumber;
-    private int zipCode;
-    private String city;
+    private String street = "Test Street";
+    private int houseNumber = 1;
+    private int zipCode = 12345;
+    private String city = "Test City";
 
-    public AddressLombok(String street, int houseNumber, int zipCode, String city) {
-
-        this.street = street;
-        this.houseNumber = houseNumber;
-        this.zipCode = zipCode;
-        this.city = city;
+    public AddressLombok() {
     }
 }

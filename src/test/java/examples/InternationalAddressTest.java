@@ -9,31 +9,41 @@ import org.junit.Test;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
 import static io.restassured.RestAssured.given;
 
-public class AddressLombokTest {
+public class InternationalAddressTest {
 
     @Rule
     public WireMockRule wireMockRule = new WireMockRule(options().port(9876));
 
-    private AddressLombok address;
+    private InternationalAddress internationalAddress;
 
     @Before
     public void createAddress() {
 
-        address = new AddressLombok();
+        internationalAddress = new InternationalAddress();
     }
 
     @Test
-    public void testAddressSerialization() {
+    public void testInternationalAddressSerialization() {
 
         // Act
         given().
             log().body().
         and().
-            body(address).
+            body(internationalAddress).
         when().
-            post("http://localhost:9876/address").
+            post("http://localhost:9876/internationaladdress").
         then().
             assertThat().
             statusCode(200);
+    }
+
+    @Test
+    public void testPrintCityAndCountry() {
+
+        // Act and assert
+        Assert.assertEquals(
+            "Test City, Test Country",
+            internationalAddress.printCityAndCountryForAddress()
+        );
     }
 }

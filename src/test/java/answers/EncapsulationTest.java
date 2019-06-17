@@ -17,7 +17,7 @@ public class EncapsulationTest {
     @Before
     public void createCar() {
 
-        car = new Car("Maserati", "Ghibli", 2019);
+        car = new Car();
     }
 
     @Test
