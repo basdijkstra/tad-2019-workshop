@@ -1,0 +1,14 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/car",
+		"bodyPatterns":[{
+			"equalToJson": { "make": "Maserati", "model": "Ghibli", "year": 2019 }
+		}] 
+    },
+    "response": {
+        "status": 200,
+		"headers": { "Content-Type": "application/json" },
+        "jsonBody": { "result": "OK" }
+    }
+}
