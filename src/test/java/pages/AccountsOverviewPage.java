@@ -1,22 +1,12 @@
 package pages;
 
-import helpers.SeleniumHelpers;
-import org.openqa.selenium.*;
+import org.openqa.selenium.WebDriver;
 
-public class AccountsOverviewPage {
-
-    private WebDriver _driver;
-    private SeleniumHelpers seleniumHelpers = new SeleniumHelpers();
-
-    private By textfieldPageHeader = By.tagName("h1");
+public class AccountsOverviewPage extends BasePage {
 
     public AccountsOverviewPage(WebDriver driver) {
 
-        _driver = driver;
-    }
-
-    public String getPageTitle() {
-
-        return seleniumHelpers.getElementText(_driver, textfieldPageHeader);
+        super(driver);
     }
 }
+
