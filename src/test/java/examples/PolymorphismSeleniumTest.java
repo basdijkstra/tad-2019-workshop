@@ -2,11 +2,13 @@ package examples;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
-import org.openqa.selenium.*;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.*;
+import pages.AccountsOverviewPage;
+import pages.LoginErrorPage;
+import pages.LoginPage;
 
-public class InheritanceSeleniumTest {
+public class PolymorphismSeleniumTest {
 
     private WebDriver browser;
 
@@ -36,14 +38,11 @@ public class InheritanceSeleniumTest {
     }
 
     @Test
-    public void testSeleniumIncorrectLoginWithInheritance() {
-
-        new LoginPage(browser).
-            loginUsingCredentials("john", "incorrect");
+    public void testSeleniumPolymorphism() {
 
         Assert.assertEquals(
-            "Error!",
-            new LoginErrorPage(browser).getPageTitle()
+            "Customer Login",
+            new LoginPage(browser).getPageTitle()
         );
     }
 

@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.AccountsOverviewPage;
-import pages.ParabankLoginPage;
+import pages.LoginPage;
 
 public class EncapsulationSeleniumTest {
 
@@ -45,7 +45,7 @@ public class EncapsulationSeleniumTest {
     @Test
     public void testSeleniumWithEncapsulation() {
 
-        new ParabankLoginPage(browser).
+        new LoginPage(browser).
             loginUsingCredentials("john", "demo");
 
         Assert.assertEquals(
