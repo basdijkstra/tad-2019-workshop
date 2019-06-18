@@ -3,7 +3,7 @@
         "method": "POST",
         "url": "/car",
 		"bodyPatterns":[{
-			"equalToJson": { "make": "Maserati", "model": "Ghibli", "year": 2019 }
+			"equalToJson": { "make": "Maserati", "model": "Ghibli", "color": "blue" }
 		}] 
     },
     "response": {

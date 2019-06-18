@@ -22,7 +22,7 @@ public class EncapsulationTest {
     }
 
     @Test
-    public void testAddressSerialization() {
+    public void testCarSerialization() {
 
         // Act
         given().

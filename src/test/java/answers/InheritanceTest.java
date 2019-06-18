@@ -5,15 +5,29 @@ import org.junit.*;
 public class InheritanceTest {
 
     @Test
-    public void testPrintAnnouncement() {
+    public void testPrintInfoBook() {
 
         // Arrange
-        CarAward carAward = new CarAward();
+        Book book = new Book();
 
         // Act and assert
         Assert.assertEquals(
-            "The 2019 Maserati Ghibli won the 'Useless award' in 2019",
-            carAward.printAnnouncement()
+            "'Lord of the Rings' is written by J.R.R. Tolkien",
+            book.printInfo()
         );
+    }
+
+    @Test
+    public void testDescribeMeBiography() {
+
+        // Arrange
+        Biography biography = new Biography();
+
+        // Act and assert
+        Assert.assertEquals(
+            "'Lord of the Rings' chronicles the life of Frodo Baggins",
+            biography.describeMe()
+        );
+
     }
 }

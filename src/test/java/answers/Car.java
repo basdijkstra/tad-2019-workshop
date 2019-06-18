@@ -4,7 +4,7 @@ public class Car {
 
     private String make = "Maserati";
     private String model = "Ghibli";
-    private int year = 2019;
+    private String color = "blue";
 
     public Car() {
     }
@@ -25,11 +25,12 @@ public class Car {
         this.model = model;
     }
 
-    public int getYear() {
-        return year;
+    public String getColor() {
+        return color;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setColor(String color) {
+        this.color = color;
     }
+
 }
