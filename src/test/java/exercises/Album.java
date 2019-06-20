@@ -12,13 +12,6 @@ public class Album {
     public Album() {
     }
 
-    public Album(String artist, String title, int releasedIn) {
-
-        this.artist = artist;
-        this.title = title;
-        this.releasedIn = releasedIn;
-    }
-
     public String printInfo() {
         return String.format("The %s album titled '%s' was released in %d", this.artist, this.title, this.releasedIn);
     }
